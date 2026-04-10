@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collection | Oasí Plant Nursery</title>
+    <meta name="description" content="Explore our full range of premium plants. Rare bonsai, adenium exotics, and luxury indoors.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="header" class="scrolled">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Oasí.</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Collection</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 1. Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Plant Collection</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Explore our full range of premium plants, cultivated with passion.</p>
+        </div>
+    </section>
+
+    <!-- 2. Filter / Categories & 3. Product Grid -->
+    <section class="section container">
+        <div class="filter-controls">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bonsai">Bonsai</button>
+                <button class="filter-btn" data-filter="adenium">Adenium</button>
+                <button class="filter-btn" data-filter="indoor">Indoor Plants</button>
+                <button class="filter-btn" data-filter="outdoor">Outdoor Plants</button>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="productSearch" placeholder="Search plants...">
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="bonsai">
+                <div class="tag">Rare</div>
+                <div class="product-img-wrapper" style="height: 250px;">
+                    <img src="assets/hero_bonsai.webp" alt="Premium Bonsai Tree">
+                </div>
+                <div class="product-info">
+                    <h3 style="font-size:1.2rem;">Ficus Retusa Bonsai</h3>
+                    <a href="https://wa.me/919747830192?text=I'm%20interested%20in%20the%20Ficus%20Retusa%20Bonsai" class="btn-outline">Enquire on WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card" data-category="adenium">
+                <div class="tag">Popular</div>
+                <div class="product-img-wrapper" style="height: 250px;">
+                    <img src="assets/desert_rose.webp" alt="Desert Rose Adenium">
+                </div>
+                <div class="product-info">
+                    <h3 style="font-size:1.2rem;">Desert Rose Adenium</h3>
+                    <a href="https://wa.me/919747830192?text=I'm%20interested%20in%20the%20Desert%20Rose%20Adenium" class="btn-outline">Enquire on WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card" data-category="indoor">
+                <div class="product-img-wrapper" style="height: 250px;">
+                    <img src="assets/exotic_indoor_plant.webp" alt="Monstera Albo">
+                </div>
+                <div class="product-info">
+                    <h3 style="font-size:1.2rem;">Monstera Albo</h3>
+                    <a href="https://wa.me/919747830192?text=I'm%20interested%20in%20the%20Monstera%20Albo" class="btn-outline">Enquire on WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card" data-category="indoor">
+                <div class="tag">Rare</div>
+                <div class="product-img-wrapper" style="height: 250px;">
+                    <img src="assets/exotic_indoor_plant.webp" alt="Philodendron Gloriosum">
+                </div>
+                <div class="product-info">
+                    <h3 style="font-size:1.2rem;">Philodendron Gloriosum</h3>
+                    <a href="https://wa.me/919747830192?text=I'm%20interested%20in%20the%20Philodendron%20Gloriosum" class="btn-outline">Enquire on WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card" data-category="bonsai">
+                <div class="product-img-wrapper" style="height: 250px;">
+                    <img src="assets/hero_bonsai.webp" alt="Juniper Bonsai">
+                </div>
+                <div class="product-info">
+                    <h3 style="font-size:1.2rem;">Juniperus Procumbens</h3>
+                    <a href="https://wa.me/919747830192?text=I'm%20interested%20in%20the%20Juniper%20Bonsai" class="btn-outline">Enquire on WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card" data-category="outdoor">
+                <div class="tag">Popular</div>
+                <div class="product-img-wrapper" style="height: 250px;">
+                    <img src="assets/nursery_garden.webp" alt="Bougainvillea Specimen">
+                </div>
+                <div class="product-info">
+                    <h3 style="font-size:1.2rem;">Bougainvillea Specimen</h3>
+                    <a href="https://wa.me/919747830192?text=I'm%20interested%20in%20the%20Bougainvillea" class="btn-outline">Enquire on WhatsApp</a>
+                </div>
+            </div>
+            
+             <!-- Product 7 -->
+            <div class="product-card" data-category="adenium">
+                <div class="product-img-wrapper" style="height: 250px;">
+                    <img src="assets/desert_rose.webp" alt="Black Adenium">
+                </div>
+                <div class="product-info">
+                    <h3 style="font-size:1.2rem;">Adenium Arabicum</h3>
+                    <a href="https://wa.me/919747830192?text=I'm%20interested%20in%20the%20Adenium%20Arabicum" class="btn-outline">Enquire on WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card" data-category="bonsai">
+                <div class="tag">Rare</div>
+                <div class="product-img-wrapper" style="height: 250px;">
+                    <img src="assets/hero_bonsai.webp" alt="Chinese Elm">
+                </div>
+                <div class="product-info">
+                    <h3 style="font-size:1.2rem;">Chinese Elm Forest</h3>
+                    <a href="https://wa.me/919747830192?text=I'm%20interested%20in%20the%20Chinese%20Elm" class="btn-outline">Enquire on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Oasí.</a>
+                    <p>Elevating spaces through nature. Cultivating premium and rare plants for those with an eye for natural elegance.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Our Collection</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+919747830192">+91 97478 30192</a></li>
+                        <li><a href="mailto:hello@oasinursery.com">hello@oasinursery.com</a></li>
+                        <li>Ernakulam, Kerala, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Oasí Premium Plants. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/919747830192?text=Hello,%20I%20have%20an%20inquiry%20regarding%20the%20Oasí%20Plant%20Nursery." class="fixed-wa" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
