@@ -325,6 +325,11 @@ header.scrolled .nav-links a::after {
   margin-bottom: 4rem;
 }
 
+.section-action {
+  text-align: center;
+  margin-top: 4rem;
+}
+
 .section-header h2 {
   font-size: 3rem;
   color: var(--primary);
@@ -820,6 +825,57 @@ footer {
 .form-control:focus {
   outline: none;
   border-color: var(--primary);
+}
+
+.contact-form {
+  background: var(--surface);
+  padding: 3rem;
+  border: 1px solid var(--border);
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.method-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.method-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.method-text h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.method-text p, .method-text a {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-map-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border: 1px solid var(--border);
+    overflow: hidden;
 }
 
 .map-container {
