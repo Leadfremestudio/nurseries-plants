@@ -72,9 +72,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openLightbox = (index) => {
         currentIndex = index;
-        if (lightboxImg) lightboxImg.src = galleryImages[currentIndex];
+        if (lightboxImg) {
+            lightboxImg.style.opacity = '0';
+            lightboxImg.src = galleryImages[currentIndex];
+            lightboxImg.onload = () => {
+                lightboxImg.style.opacity = '1';
+            };
+        }
         lightbox?.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scroll
+        document.body.style.overflow = 'hidden'; 
+    };
+
+    const updateLightboxImage = (newIndex) => {
+        if (!lightboxImg) return;
+        currentIndex = newIndex;
+        lightboxImg.classList.add('fading');
+        setTimeout(() => {
+            lightboxImg.src = galleryImages[currentIndex];
+            lightboxImg.onload = () => {
+                lightboxImg.classList.remove('fading');
+            };
+        }, 200);
     };
 
     triggers.forEach((trigger, index) => {
@@ -88,14 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     prevBtn?.addEventListener('click', (e) => {
         e.stopPropagation();
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        if (lightboxImg) lightboxImg.src = galleryImages[currentIndex];
+        updateLightboxImage((currentIndex - 1 + galleryImages.length) % galleryImages.length);
     });
 
     nextBtn?.addEventListener('click', (e) => {
         e.stopPropagation();
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        if (lightboxImg) lightboxImg.src = galleryImages[currentIndex];
+        updateLightboxImage((currentIndex + 1) % galleryImages.length);
     });
 
     lightbox?.addEventListener('click', () => {
@@ -103,29 +119,33 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'auto';
     });
     
-    // Smooth reveal animation for sections
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // Smooth reveal animation for sections (Homepage Only)
+    const isHomePage = window.location.pathname.endsWith('/') || window.location.pathname.includes('index.html');
+    
+    if (isHomePage) {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(section);
         });
-    }, observerOptions);
-
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-        observer.observe(section);
-    });
+    }
     // Swiper Initialization
     if (typeof Swiper !== 'undefined' && document.querySelector('.testimonials-swiper')) {
         const testimonialsSwiper = new Swiper('.testimonials-swiper', {
