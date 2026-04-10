@@ -1,9 +1,0 @@
-{
-  "name": "nursery-plants",
-  "version": "1.0.0",
-  "description": "Nursery and Plants website",
-  "main": "index.js",
-  "dependencies": {
-    "sharp": "^0.32.6"
-  }
-}
