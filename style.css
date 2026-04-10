@@ -1235,6 +1235,21 @@ footer {
     position: relative;
     z-index: 10;
   }
+
+  /* Standardize Gallery Image Height on Mobile */
+  .responsive-swiper .gallery-item img {
+    height: 400px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Secondary Styled Navigation Buttons */
+  .responsive-swiper .swiper-button-prev-custom,
+  .responsive-swiper .swiper-button-next-custom {
+    background: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: var(--primary) !important;
+  }
 }
 
 @media (min-width: 1025px) {
