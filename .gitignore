@@ -1,7 +1,3 @@
-# Node.js (used for one-time image conversion scripts only)
-node_modules/
-package-lock.json
-
 # OS files
 .DS_Store
 Thumbs.db
@@ -9,6 +5,3 @@ Thumbs.db
 # Editor files
 .vscode/
 *.bak
-
-# One-time utility scripts
-scripts/
