@@ -1090,9 +1090,20 @@ footer {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .product-card {
+    background-color: #f7f7f5 !important; /* Subtle premium gray for mobile */
+    border-color: rgba(0,0,0,0.03) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.17) !important; /* Soft lift for mobile cards */
+  }
 }
 
 @media (max-width: 768px) {
+  h1 { font-size: 2.8rem !important; }
+  h2 { font-size: 2.2rem !important; }
+  h3 { font-size: 1.6rem !important; }
+  p { font-size: 1rem !important; line-height: 1.6 !important; }
+
   .hero {
     flex-direction: column;
     text-align: center;
@@ -1102,7 +1113,7 @@ footer {
     opacity: 1; /* Inherit global dark tint */
   }
   .hero h1 {
-    font-size: 3rem; /* Scaled for mobile */
+    font-size: 3rem !important; /* Hero specific large scale */
   }
   .hero .btn-primary {
     background-color: var(--primary);
@@ -1113,6 +1124,7 @@ footer {
   .rating-badge {
     background: rgba(0, 0, 0, 0.4);
     border-color: rgba(255, 255, 255, 0.1);
+    justify-content: center;
   }
   .fixed-wa {
     background-color: #25D366;
