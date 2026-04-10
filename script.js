@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileNavToggle.addEventListener('click', () => {
             mobileNavToggle.classList.toggle('active');
             navLinks?.classList.toggle('open');
+            document.getElementById('header')?.classList.toggle('nav-open');
             document.body.style.overflow = navLinks?.classList.contains('open') ? 'hidden' : 'auto';
         });
     }
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             mobileNavToggle?.classList.remove('active');
             navLinks?.classList.remove('open');
+            document.getElementById('header')?.classList.remove('nav-open');
             document.body.style.overflow = 'auto';
         });
     });
@@ -135,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 1,
             spaceBetween: 30,
             navigation: {
-                nextEl: '.swiper-button-next-custom',
-                prevEl: '.swiper-button-prev-custom',
+                nextEl: '.testimonials-swiper .swiper-button-next-custom',
+                prevEl: '.testimonials-swiper .swiper-button-prev-custom',
             },
             breakpoints: {
                 768: {
@@ -146,6 +148,36 @@ document.addEventListener('DOMContentLoaded', () => {
                     slidesPerView: 3,
                 }
             }
+        });
+    }
+
+    // Responsive Product & Gallery Swiper
+    if (typeof Swiper !== 'undefined' && document.querySelectorAll('.responsive-swiper').length > 0) {
+        document.querySelectorAll('.responsive-swiper').forEach(swiperEl => {
+            new Swiper(swiperEl, {
+                loop: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: swiperEl.querySelector('.swiper-button-next-custom'),
+                    prevEl: swiperEl.querySelector('.swiper-button-prev-custom'),
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        centeredSlides: false,
+                        spaceBetween: 30
+                    },
+                    1025: {
+                        enabled: false, // Turn off swiper interaction and reset layout on desktop
+                        spaceBetween: 0
+                    }
+                }
+            });
         });
     }
 

@@ -76,7 +76,7 @@ header {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 100;
+  z-index: 1100;
   transition: var(--transition);
 }
 
@@ -1081,6 +1081,11 @@ footer {
     grid-template-columns: 1fr;
   }
   
+  .logo {
+    position: relative;
+    z-index: 10001; /* Must be higher than nav-links (9999) */
+  }
+
   .mobile-nav-toggle {
     display: flex;
     flex-direction: column;
@@ -1090,8 +1095,9 @@ footer {
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 10001; /* Must be higher than nav-links (9999) */
     padding: 0;
+    position: relative;
   }
   
   .mobile-nav-toggle span {
@@ -1120,6 +1126,21 @@ footer {
     background-color: var(--primary);
   }
 
+  header.nav-open {
+    background-color: var(--bg) !important;
+    backdrop-filter: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    z-index: 10000 !important;
+  }
+
+  header.nav-open .logo {
+    color: var(--primary) !important;
+  }
+
+  header.nav-open .mobile-nav-toggle span {
+    background-color: var(--primary) !important;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -1133,7 +1154,7 @@ footer {
     justify-content: center;
     gap: 2rem;
     transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    z-index: 1000;
+    z-index: 9999;
   }
 
   .nav-links.open {
@@ -1168,5 +1189,56 @@ footer {
 @media (max-width: 480px) {
   .products-grid, .grid-featured {
     grid-template-columns: 1fr;
+  }
+}
+
+/* --- Responsive Swiper Reset & Mobile Styles --- */
+@media (min-width: 1025px) {
+  .responsive-swiper {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+  .responsive-swiper .swiper-wrapper {
+    display: grid !important;
+    transform: none !important;
+  }
+  .responsive-swiper .swiper-slide {
+    width: auto !important;
+    margin-right: 0 !important;
+  }
+  .responsive-swiper .swiper-button-next,
+  .responsive-swiper .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .responsive-swiper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .responsive-swiper .swiper-wrapper {
+    padding-bottom: 2rem;
+    display: flex !important;
+    gap: 0 !important;
+  }
+
+  .responsive-swiper .swiper-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-right: 1.5rem;
+    margin-top: -3rem; /* Pull up to sit alongside current section spacing */
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 1025px) {
+  .responsive-swiper .swiper-controls {
+    display: none !important;
   }
 }

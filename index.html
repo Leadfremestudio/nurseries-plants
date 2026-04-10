@@ -59,9 +59,9 @@
             <h2>Signature Selections</h2>
             <p>Our most sought-after and rare plant specimens. Each plant is meticulously cared for to assure absolute perfection upon arrival.</p>
         </div>
-        <div class="grid-featured">
+        <div class="swiper responsive-swiper"><div class="grid-featured swiper-wrapper">
             <!-- Product 1 -->
-            <div class="product-card">
+            <div class="swiper-slide product-card">
                 <div class="tag">Rare</div>
                 <div class="product-img-wrapper">
                     <img src="assets/hero_bonsai.webp" alt="Premium Bonsai Tree">
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <!-- Product 2 -->
-            <div class="product-card">
+            <div class="swiper-slide product-card">
                 <div class="tag">Best Seller</div>
                 <div class="product-img-wrapper">
                     <img src="assets/desert_rose.webp" alt="Desert Rose Adenium">
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <!-- Product 3 -->
-            <div class="product-card">
+            <div class="swiper-slide product-card">
                 <div class="tag">Exotic</div>
                 <div class="product-img-wrapper">
                     <img src="assets/exotic_indoor_plant.webp" alt="Monstera Deliciosa">
@@ -97,6 +97,12 @@
                 </div>
             </div>
         </div>
+        <!-- Swiper Controls -->
+        <div class="swiper-controls">
+            <div class="swiper-button-prev-custom"><i class="fas fa-arrow-left"></i></div>
+            <div class="swiper-button-next-custom"><i class="fas fa-arrow-right"></i></div>
+        </div>
+    </div>
     </section>
 
     <!-- 3. About the Nursery & 7. Why Choose Us -->
@@ -138,39 +144,46 @@
             <h2>Our Collections</h2>
             <p>Discover our specialized ranges tailored to elevate any living space.</p>
         </div>
-        <div class="grid-featured" style="margin-bottom: 4rem;">
-            <div class="product-card">
-                <div class="tag">Category</div>
-                <div class="product-img-wrapper" style="height:350px;">
-                    <img src="assets/bonsai_cat.webp" alt="Bonsai Collection">
+        <div class="swiper responsive-swiper" style="margin-bottom: 4rem;">
+            <div class="grid-featured swiper-wrapper">
+                <div class="swiper-slide product-card">
+                    <div class="tag">Category</div>
+                    <div class="product-img-wrapper" style="height:350px;">
+                        <img src="assets/bonsai_cat.webp" alt="Bonsai Collection">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bonsai Masterpieces</h3>
+                        <p>Ancient Living Art</p>
+                        <a href="products.html?filter=bonsai" class="btn-outline">View Collection</a>
+                    </div>
                 </div>
-                <div class="product-info">
-                    <h3>Bonsai Masterpieces</h3>
-                    <p>Ancient Living Art</p>
-                    <a href="products.html?filter=bonsai" class="btn-outline">View Collection</a>
+                <div class="swiper-slide product-card">
+                    <div class="tag">Category</div>
+                    <div class="product-img-wrapper" style="height:350px;">
+                        <img src="assets/adenium_cat.webp" alt="Adenium Collection">
+                    </div>
+                    <div class="product-info">
+                        <h3>Adenium Exotics</h3>
+                        <p>Sculptural Desert Blooms</p>
+                        <a href="products.html?filter=adenium" class="btn-outline">View Collection</a>
+                    </div>
+                </div>
+                <div class="swiper-slide product-card">
+                    <div class="tag">Category</div>
+                    <div class="product-img-wrapper" style="height:350px;">
+                        <img src="assets/indoor_cat.webp" alt="Indoor Collection">
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxury Indoors</h3>
+                        <p>Premium Living Spaces</p>
+                        <a href="products.html?filter=indoor" class="btn-outline">View Collection</a>
+                    </div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="tag">Category</div>
-                <div class="product-img-wrapper" style="height:350px;">
-                    <img src="assets/adenium_cat.webp" alt="Adenium Collection">
-                </div>
-                <div class="product-info">
-                    <h3>Adenium Exotics</h3>
-                    <p>Sculptural Desert Blooms</p>
-                    <a href="products.html?filter=adenium" class="btn-outline">View Collection</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="tag">Category</div>
-                <div class="product-img-wrapper" style="height:350px;">
-                    <img src="assets/indoor_cat.webp" alt="Indoor Collection">
-                </div>
-                <div class="product-info">
-                    <h3>Luxury Indoors</h3>
-                    <p>Premium Living Spaces</p>
-                    <a href="products.html?filter=indoor" class="btn-outline">View Collection</a>
-                </div>
+            <!-- Swiper Controls -->
+            <div class="swiper-controls">
+                <div class="swiper-button-prev-custom"><i class="fas fa-arrow-left"></i></div>
+                <div class="swiper-button-next-custom"><i class="fas fa-arrow-right"></i></div>
             </div>
         </div>
         <div style="text-align: center;">
@@ -185,17 +198,23 @@
                 <h2>A Glimpse Into Our World</h2>
                 <p>Real captures from our lush plantation and curated nurseries.</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="assets/gallary/14730.webp" class="gallery-trigger" alt="Plantation View 1"></div>
-                <div class="gallery-item"><img src="assets/gallary/2148127963.webp" class="gallery-trigger" alt="Plantation View 2"></div>
-                <div class="gallery-item"><img src="assets/gallary/2148447133.webp" class="gallery-trigger" alt="Plantation View 3"></div>
-                <div class="gallery-item"><img src="assets/gallary/2148488483.webp" class="gallery-trigger" alt="Plantation View 4"></div>
-                <div class="gallery-item"><img src="assets/gallary/2148488486.webp" class="gallery-trigger" alt="Plantation View 5"></div>
-                <div class="gallery-item"><img src="assets/gallary/2148488513.webp" class="gallery-trigger" alt="Plantation View 6"></div>
-                <div class="gallery-item"><img src="assets/gallary/2148488541.webp" class="gallery-trigger" alt="Plantation View 7"></div>
-                <div class="gallery-item"><img src="assets/gallary/2148488547.webp" class="gallery-trigger" alt="Plantation View 8"></div>
+            <div class="swiper responsive-swiper"><div class="gallery-grid swiper-wrapper">
+                <div class="swiper-slide gallery-item"><img src="assets/gallary/14730.webp" class="gallery-trigger" alt="Plantation View 1"></div>
+                <div class="swiper-slide gallery-item"><img src="assets/gallary/2148127963.webp" class="gallery-trigger" alt="Plantation View 2"></div>
+                <div class="swiper-slide gallery-item"><img src="assets/gallary/2148447133.webp" class="gallery-trigger" alt="Plantation View 3"></div>
+                <div class="swiper-slide gallery-item"><img src="assets/gallary/2148488483.webp" class="gallery-trigger" alt="Plantation View 4"></div>
+                <div class="swiper-slide gallery-item"><img src="assets/gallary/2148488486.webp" class="gallery-trigger" alt="Plantation View 5"></div>
+                <div class="swiper-slide gallery-item"><img src="assets/gallary/2148488513.webp" class="gallery-trigger" alt="Plantation View 6"></div>
+                <div class="swiper-slide gallery-item"><img src="assets/gallary/2148488541.webp" class="gallery-trigger" alt="Plantation View 7"></div>
+                <div class="swiper-slide gallery-item"><img src="assets/gallary/2148488547.webp" class="gallery-trigger" alt="Plantation View 8"></div>
             </div>
-            <div style="text-align: center; margin-top: 4rem;">
+            <!-- Swiper Controls -->
+            <div class="swiper-controls">
+                <div class="swiper-button-prev-custom"><i class="fas fa-arrow-left"></i></div>
+                <div class="swiper-button-next-custom"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem;">
                 <a href="gallery.html" class="btn-outline">View Full Gallery</a>
             </div>
         </div>
